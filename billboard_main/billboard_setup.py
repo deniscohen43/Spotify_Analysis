@@ -57,7 +57,7 @@ charts_3 = []
 charts_5 = []
 
 for i in range(52*5):
-    date = date_5[i]
+    date = dates_5[i]
 
     # Logic for all Charts
     chart = setup.import_chart(date=date)

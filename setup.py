@@ -2,24 +2,14 @@ import billboard
 import json
 import pandas as pd
 
-def import_chart(name='hot-100', date=None, fetch=None, timeout=None):
+def import_chart(name='hot-100', date=None, fetch=True, timeout=None):
     '''
     Chart importing using the billboard.py HTML parser
-
     '''
 
     chart = billboard.ChartData(name=name, date=date, fetch=fetch, timeout=timeout)
 
     return chart
-    # chart = billboard.ChartData(name=name, date=date)
-    #
-    # chart_json = json.loads(chart.json())
-    #
-    # chart_df = pd.DataFrame(chart_json)
-    #
-    # chart_df = pd.DataFrame(chart_df['entries'].array)
-    #
-    # return chart_df
 
 def chart_parser(chart):
     '''
@@ -35,13 +25,11 @@ def chart_parser(chart):
             .weeks - Int64
     '''
 
-    chart_entries = json.loads(today.json()) # Load from JSON object
-    chart_entries = pd.DataFrame.from_dict(chart_entires['entries'])
+    chart_entries = json.loads(chart.json()) # Load from JSON object
+    chart_entries = pd.DataFrame.from_dict(chart_entries['entries'])
 
     # Clean Entries
     chart_entries = chart_entries[['artist', 'title', 'lastPos', 'rank', 'weeks']]
     chart_entries['date'] = chart.date # Add Date to all rows
 
     return chart_entries
-
-    
