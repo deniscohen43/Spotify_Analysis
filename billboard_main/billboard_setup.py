@@ -5,9 +5,9 @@
     GOAL: Create a 1 year, 3 year, and 5 year log of the billboard 'top-100' charts.
 
     @ DONE Complete date sectioning
-    @ TODO Pull Data for 1 year charts. Save to csv
-    @ TODO Pull Data for 3 year charts. Save to csv
-    @ TODO Pull Data for 5 year charts. Save to csv
+    @ DONE Pull Data for 1 year charts. Save to csv
+    @ DONE Pull Data for 3 year charts. Save to csv
+    @ DONE Pull Data for 5 year charts. Save to csv
 '''
 
 # Sys Path to Set Up
