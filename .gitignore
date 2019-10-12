@@ -1,5 +1,4 @@
-# Ignore Billboard Set Up
-billboard/*
-billboard_main/*
+# Ignore Billboard Set U
+/billboard_main/*
 
 # Ignore Spotify Set Up
